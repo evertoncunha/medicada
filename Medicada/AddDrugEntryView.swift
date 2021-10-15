@@ -11,6 +11,8 @@ import CoreData
 struct AddDrugEntryView: View {
   
   @Environment(\.managedObjectContext) private var viewContext
+  
+  @Environment(\.presentationMode) var presentationMode
 
   @FetchRequest(
     sortDescriptors: [NSSortDescriptor(keyPath: \Drug.name, ascending: true)],
@@ -18,6 +20,7 @@ struct AddDrugEntryView: View {
   private var items: FetchedResults<Drug>
   
   @State var drug: Drug? = nil
+  @State var amount: UInt32 = 0
   @State var date: Date = .now
   
   var body: some View {
@@ -27,6 +30,11 @@ struct AddDrugEntryView: View {
           Text(item.name ?? "").tag(item as Drug?)
         }
       }
+      TextField("Amount", text: Binding(
+        get: { String(amount) },
+        set: { amount = UInt32($0) ?? 0 }
+      ))
+        .keyboardType(.numberPad)
       DatePicker("", selection: $date)
     }
     .toolbar {
@@ -57,6 +65,7 @@ struct AddDrugEntryView: View {
       
       do {
         try viewContext.save()
+        presentationMode.wrappedValue.dismiss()
       } catch {
         // Replace this implementation with code to handle the error appropriately.
         // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.

@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="Drug" representedClassName="Drug" syncable="YES" codeGenerationType="class">
-        <attribute name="name" attributeType="String"/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
         <relationship name="entries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Entry" inverseName="drug" inverseEntity="Entry"/>
     </entity>
     <entity name="Entry" representedClassName="Entry" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Integer 32" minValueString="0" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="drug" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Drug" inverseName="entries" inverseEntity="Drug"/>
         <relationship name="symptom" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Symptom" inverseName="entries" inverseEntity="Symptom"/>
     </entity>
     <entity name="Symptom" representedClassName="Symptom" syncable="YES" codeGenerationType="class">
-        <attribute name="name" attributeType="String"/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
         <relationship name="entries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Entry" inverseName="symptom" inverseEntity="Entry"/>
     </entity>
     <elements>
-        <element name="Symptom" positionX="-63" positionY="-9" width="128" height="59"/>
         <element name="Drug" positionX="-54" positionY="0" width="128" height="59"/>
-        <element name="Entry" positionX="-36" positionY="18" width="128" height="74"/>
+        <element name="Entry" positionX="-36" positionY="18" width="128" height="89"/>
+        <element name="Symptom" positionX="-63" positionY="-9" width="128" height="59"/>
     </elements>
 </model>
