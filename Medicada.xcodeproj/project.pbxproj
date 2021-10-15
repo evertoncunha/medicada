@@ -16,6 +16,9 @@
 		3E18B2232719F84D00D8B1CC /* MedicadaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E18B2222719F84D00D8B1CC /* MedicadaTests.swift */; };
 		3E18B22D2719F84D00D8B1CC /* MedicadaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E18B22C2719F84D00D8B1CC /* MedicadaUITests.swift */; };
 		3E18B22F2719F84D00D8B1CC /* MedicadaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E18B22E2719F84D00D8B1CC /* MedicadaUITestsLaunchTests.swift */; };
+		3E18B23F2719F98300D8B1CC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E18B23E2719F98300D8B1CC /* CloudKit.framework */; };
+		3E18B2412719FD1E00D8B1CC /* AddDrugEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E18B2402719FD1E00D8B1CC /* AddDrugEntryView.swift */; };
+		3E18B243271A0AF300D8B1CC /* AddDrugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E18B242271A0AF300D8B1CC /* AddDrugView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,10 @@
 		3E18B2282719F84D00D8B1CC /* MedicadaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedicadaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E18B22C2719F84D00D8B1CC /* MedicadaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicadaUITests.swift; sourceTree = "<group>"; };
 		3E18B22E2719F84D00D8B1CC /* MedicadaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicadaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3E18B23B2719F94F00D8B1CC /* Medicada.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Medicada.entitlements; sourceTree = "<group>"; };
+		3E18B23E2719F98300D8B1CC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		3E18B2402719FD1E00D8B1CC /* AddDrugEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrugEntryView.swift; sourceTree = "<group>"; };
+		3E18B242271A0AF300D8B1CC /* AddDrugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrugView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E18B23F2719F98300D8B1CC /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +90,7 @@
 				3E18B2212719F84D00D8B1CC /* MedicadaTests */,
 				3E18B22B2719F84D00D8B1CC /* MedicadaUITests */,
 				3E18B20A2719F84B00D8B1CC /* Products */,
+				3E18B23D2719F98300D8B1CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,8 +107,11 @@
 		3E18B20B2719F84B00D8B1CC /* Medicada */ = {
 			isa = PBXGroup;
 			children = (
+				3E18B23B2719F94F00D8B1CC /* Medicada.entitlements */,
 				3E18B20C2719F84B00D8B1CC /* MedicadaApp.swift */,
 				3E18B20E2719F84B00D8B1CC /* ContentView.swift */,
+				3E18B2402719FD1E00D8B1CC /* AddDrugEntryView.swift */,
+				3E18B242271A0AF300D8B1CC /* AddDrugView.swift */,
 				3E18B2102719F84D00D8B1CC /* Assets.xcassets */,
 				3E18B2152719F84D00D8B1CC /* Persistence.swift */,
 				3E18B2172719F84D00D8B1CC /* Medicada.xcdatamodeld */,
@@ -131,6 +143,14 @@
 				3E18B22E2719F84D00D8B1CC /* MedicadaUITestsLaunchTests.swift */,
 			);
 			path = MedicadaUITests;
+			sourceTree = "<group>";
+		};
+		3E18B23D2719F98300D8B1CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E18B23E2719F98300D8B1CC /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +284,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E18B2162719F84D00D8B1CC /* Persistence.swift in Sources */,
+				3E18B243271A0AF300D8B1CC /* AddDrugView.swift in Sources */,
+				3E18B2412719FD1E00D8B1CC /* AddDrugEntryView.swift in Sources */,
 				3E18B2192719F84D00D8B1CC /* Medicada.xcdatamodeld in Sources */,
 				3E18B20F2719F84B00D8B1CC /* ContentView.swift in Sources */,
 				3E18B20D2719F84B00D8B1CC /* MedicadaApp.swift in Sources */,
@@ -424,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Medicada/Medicada.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Medicada/Preview Content\"";
@@ -435,7 +458,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Medicada/Medicada.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Medicada/Preview Content\"";
@@ -465,7 +489,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
