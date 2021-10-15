@@ -54,7 +54,9 @@ struct ContentView: View {
       Text("Select an item")
     }
     .sheet(isPresented: $presentNewDrugEntry) {
-      AddDrugEntryView()
+      NavigationView {
+        AddDrugEntryView()
+      }
     }
     .sheet(isPresented: $presentAddDrug) {
       AddDrugView()

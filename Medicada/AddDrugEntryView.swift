@@ -17,26 +17,17 @@ struct AddDrugEntryView: View {
     animation: .default)
   private var items: FetchedResults<Drug>
   
-  @State var selection: Drug? = nil
+  @State var drug: Drug? = nil
   @State var date: Date = .now
   
   var body: some View {
     Form {
-      Picker("Drug", selection: $selection, content: {
-        ForEach(items) { (item: Item) in
-          Text(item.name)
+      Picker("Drug", selection: $drug) {
+        ForEach(items, id: \.self) { item in
+          Text(item.name ?? "").tag(item as Drug?)
         }
-      })
-        List {
-          ForEach(drugs) { item in
-            NavigationLink {
-              Text("\(item.name!)")
-            } label: {
-              Text("\(item.name!)")
-            }
-          }
-        }
-        DatePicker("", selection: $date)
+      }
+      DatePicker("", selection: $date)
     }
     .toolbar {
       ToolbarItem {
@@ -49,16 +40,18 @@ struct AddDrugEntryView: View {
   
   func saveItem() {
     withAnimation {
+      guard let selection = drug else { return }
+      
       let newItem = Entry(context: viewContext)
       newItem.timestamp = date
       
-      if let existingDrug = drugs.first(where: { $0.name == drugName })
+      if let existingDrug = items.first(where: { $0.name == selection.name })
       {
         newItem.drug = existingDrug
       }
       else {
         let newDrug = Drug(context: viewContext)
-        newDrug.name = drugName
+        newDrug.name = selection.name
         newItem.drug = newDrug
       }
       
