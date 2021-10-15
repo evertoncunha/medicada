@@ -20,7 +20,7 @@ struct AddDrugEntryView: View {
   private var items: FetchedResults<Drug>
   
   @State var drug: Drug? = nil
-  @State var amount: UInt32 = 0
+  @State var amount: Int32 = 0
   @State var date: Date = .now
   
   var body: some View {
@@ -32,7 +32,7 @@ struct AddDrugEntryView: View {
       }
       TextField("Amount", text: Binding(
         get: { String(amount) },
-        set: { amount = UInt32($0) ?? 0 }
+        set: { amount = Int32($0) ?? 0 }
       ))
         .keyboardType(.numberPad)
       DatePicker("", selection: $date)
@@ -56,6 +56,7 @@ struct AddDrugEntryView: View {
       if let existingDrug = items.first(where: { $0.name == selection.name })
       {
         newItem.drug = existingDrug
+        newItem.amount = amount
       }
       else {
         let newDrug = Drug(context: viewContext)
