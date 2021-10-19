@@ -19,6 +19,8 @@
 		3E18B23F2719F98300D8B1CC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E18B23E2719F98300D8B1CC /* CloudKit.framework */; };
 		3E18B2412719FD1E00D8B1CC /* AddDrugEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E18B2402719FD1E00D8B1CC /* AddDrugEntryView.swift */; };
 		3E18B243271A0AF300D8B1CC /* AddDrugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E18B242271A0AF300D8B1CC /* AddDrugView.swift */; };
+		3E24942F271F4E3E0024FC57 /* AddSymptomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E24942E271F4E3E0024FC57 /* AddSymptomView.swift */; };
+		3E249431271F4F460024FC57 /* AddSymptomEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E249430271F4F460024FC57 /* AddSymptomEntryView.swift */; };
 		3E47BCAD271A20DC0065AE82 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E47BCAC271A20DC0065AE82 /* EntryView.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		3E18B23E2719F98300D8B1CC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		3E18B2402719FD1E00D8B1CC /* AddDrugEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrugEntryView.swift; sourceTree = "<group>"; };
 		3E18B242271A0AF300D8B1CC /* AddDrugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrugView.swift; sourceTree = "<group>"; };
+		3E24942E271F4E3E0024FC57 /* AddSymptomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSymptomView.swift; sourceTree = "<group>"; };
+		3E249430271F4F460024FC57 /* AddSymptomEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSymptomEntryView.swift; sourceTree = "<group>"; };
 		3E47BCAC271A20DC0065AE82 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +117,9 @@
 				3E18B20C2719F84B00D8B1CC /* MedicadaApp.swift */,
 				3E18B20E2719F84B00D8B1CC /* ContentView.swift */,
 				3E18B2402719FD1E00D8B1CC /* AddDrugEntryView.swift */,
+				3E249430271F4F460024FC57 /* AddSymptomEntryView.swift */,
 				3E18B242271A0AF300D8B1CC /* AddDrugView.swift */,
+				3E24942E271F4E3E0024FC57 /* AddSymptomView.swift */,
 				3E18B2102719F84D00D8B1CC /* Assets.xcassets */,
 				3E18B2152719F84D00D8B1CC /* Persistence.swift */,
 				3E18B2172719F84D00D8B1CC /* Medicada.xcdatamodeld */,
@@ -290,9 +296,11 @@
 				3E18B243271A0AF300D8B1CC /* AddDrugView.swift in Sources */,
 				3E18B2412719FD1E00D8B1CC /* AddDrugEntryView.swift in Sources */,
 				3E18B2192719F84D00D8B1CC /* Medicada.xcdatamodeld in Sources */,
+				3E24942F271F4E3E0024FC57 /* AddSymptomView.swift in Sources */,
 				3E47BCAD271A20DC0065AE82 /* EntryView.swift in Sources */,
 				3E18B20F2719F84B00D8B1CC /* ContentView.swift in Sources */,
 				3E18B20D2719F84B00D8B1CC /* MedicadaApp.swift in Sources */,
+				3E249431271F4F460024FC57 /* AddSymptomEntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +465,7 @@
 				DEVELOPMENT_TEAM = G29UMFAC45;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "medicadah!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -488,6 +497,7 @@
 				DEVELOPMENT_TEAM = G29UMFAC45;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "medicadah!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
